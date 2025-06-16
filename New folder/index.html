@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragadeesh — Film & Music</title>
+
+  <!-- ScrollReveal CDN -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #f2f2f2;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .light-mode {
+      background-color: #ffffff;
+      color: #121212;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f2f2f2;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .light-mode section {
+      background-color: #f4f4f4;
+      color: #121212;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .film-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .film {
+      width: 160px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .film:hover {
+      transform: scale(1.05);
+    }
+
+    .film img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    }
+
+    .film p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+    .social {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #f2f2f2;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .social a:hover {
+      background-color: #f2f2f2;
+      color: #121212;
+    }
+
+     .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+
+  </style>
+</head>
+<body>
+  <body class="dark-mode">
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark</button>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Pragadeesh — Cinema and music have always been at the center of what I care about — they shape how I think, feel, and express myself. Directors like Yorgos Lanthimos, Tarantino, the Safdie brothers, Paul Thomas Anderson, Wong Kar Wai, and Scorsese have deeply influenced my taste and the way I look at storytelling — whether it’s through mood, chaos, or silence. I’m about to begin my journey at CIT as a Computer Science student, and I’ve recently started getting into coding — curious about how it can open up new creative spaces. I’m also working on personal short films, trying to capture the thoughts and feelings I can’t always put into words..</p>
+  </section>
+
+  <section id="films">
+    <h2>Favourite Films</h2>
+    <p>These are four films that speak to me right now — though they change based on how I feel:</p>
+    <div class="film-grid">
+      <div class="film">
+        <img src="https://m.media-amazon.com/images/M/MV5BODU1M2FhNmMtYjQwYy00MzZlLWJjODctMGFmNjBlMDM5MjkzXkEyXkFqcGc@._V1_.jpg" alt="Punch Drunk Love">
+        <p><strong>Punch Drunk Love</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://i.etsystatic.com/7553407/r/il/54e52d/5959233277/il_fullxfull.5959233277_bp9p.jpg" alt="The Mask">
+        <p><strong>The Mask</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTc4ODY4MjY2MF5BMl5BanBnXkFtZTcwNTE0MDMzNA@@._V1_.jpg" alt="Happy Together">
+        <p><strong>Happy Together</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://image.tmdb.org/t/p/original/qeUwSVWkBV1syiRXWqlLqwGrDyb.jpg" alt="I'm a Cyborg But That's OK">
+        <p><strong>I'm a Cyborg But That's OK</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Music I Love</h2>
+    <p>These are albums that soundtrack different moments in my life:</p>
+    <div class="film-grid">
+      <div class="film">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Cover_art_of_Kid_A_Mnesia_Radiohead.jpeg" alt="Kid A">
+        <p><strong>Kid A – Radiohead</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/Mazzy_Star_-_Among_My_Swan.png" alt="Among My Swan">
+        <p><strong>Among My Swan – Mazzy Star</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://m.media-amazon.com/images/I/81D8Ok3XMhL._UF1000,1000_QL80_.jpg" alt="2 by Mac Demarco">
+        <p><strong>2 – Mac DeMarco</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://m.media-amazon.com/images/I/81opDuEYnGL._UF1000,1000_QL80_.jpg" alt="Carrie and Lowell">
+        <p><strong>Carrie & Lowell – Sufjan Stevens</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://www.focusfeatures.com/_next/image?url=https%3A%2F%2Fff-media-assets.raptor.nbcuniversal.com%2Fenternal_sunshin_of_the_spotless_mind_poster_2d9abe066a.png&w=3840&q=75" alt="Eternal Sunshine Soundtrack">
+        <p><strong>Eternal Sunshine of the Spotless Mind OST</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3c/Queen_Hot_Space.png" alt="Hot Space by Queen">
+        <p><strong>Hot Space – Queen</strong></p>
+      </div>
+      <div class="film">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7b/David_Bowie_-_Heroes.png" alt="Heroes by David Bowie">
+        <p><strong>Heroes – David Bowie</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="mywork">
+  <h2>My Work</h2>
+  <p>This is one of my recent Instagram videos, showcasing my creative output:</p>
+  <div class="video-container">
+    <iframe src="https://www.instagram.com/reel/DAGJ7AiSS1a/embed" allowfullscreen></iframe>
+  </div>
+</section>
+
+
+  <div class="social">
+    <a href="https://www.instagram.com/pragu.vijay/" target="_blank">Instagram Handle</a>
+  </div>
+
+  <script>
+    ScrollReveal().reveal('section', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      delay: 200,
+      easing: 'ease-in-out',
+      reset: false
+    });
+
+    function toggleMode() {
+      const body = document.body;
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      }
+    }
+  </script>
+</body>
+</html>
